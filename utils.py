@@ -9,3 +9,10 @@ def unnormalize_to_zero_to_one(img: torch.Tensor) -> torch.Tensor:
 
 def identity(x):
     return x
+
+def extract(
+    constants: torch.Tensor, timestamps: torch.Tensor, shape: int
+) -> torch.Tensor:
+    batch_size = timestamps.shape[0]
+    out = constants.gather(-1, timestamps)
+    return out.reshape(batch_size, *((1,) * (len(shape) - 1))).to(timestamps.device)

@@ -34,7 +34,7 @@ class TimeEmbedder(nn.Module):
             nn.Linear(4*dim, 4*dim),
         )
 
-    def __forward__(self, x):
+    def forward(self, x):
         x = self.posembedder(x)
         x = self.time_mlp(x)
         return x
@@ -242,3 +242,21 @@ class TwoResUNet(nn.Module):
         x = self.final_res_block(x, t)
 
         return self.final_conv(x)
+
+
+
+if __name__ == "__main__":
+    device = "cuda"
+    img_in = torch.randn(1, 3, 128, 128).to(device)
+    timestamp_in = torch.randn(1).to(device)
+
+
+   
+    model = TwoResUNet(64, channels=3).to(device)
+   
+    
+
+
+    output = model(img_in, timestamp_in)
+    assert output.shape == img_in.shape, "Not the same shape as input"
+    print("Success!")

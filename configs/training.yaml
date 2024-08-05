@@ -1,0 +1,17 @@
+model :
+  input_dim: 64
+  batch_size: 16
+  dim_mults: [1 2 4 8]
+  channels: 3
+
+training : 
+    train_batch_size: 16
+    train_lr: 1e-4
+    train_num_steps: 100000
+    save_and_sample_every: 1000
+    num_samples: 4
+
+diffusion : 
+    timesteps: 1000
+    image_size: 128
+  
