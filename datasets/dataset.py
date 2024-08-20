@@ -9,7 +9,7 @@ class PokemonDataset(Dataset):
         self.pokemon_metadata = pd.read_csv(csv_file)
         self.img_dir = img_dir
         self.transform = transforms.Compose([
-            transforms.Resize((128, 128)),
+            transforms.Resize((64, 64)),
             transforms.ToTensor()
         ])
 
@@ -18,8 +18,7 @@ class PokemonDataset(Dataset):
 
     def __getitem__(self, idx):
         row = self.pokemon_metadata.iloc[idx]
-        name = row['Name']
-        img_path = f"{self.img_dir}/{name}.png"
+        img_path = row['Path']
         image = Image.open(img_path).convert('RGB')
 
         if self.transform:

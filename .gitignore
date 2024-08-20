@@ -1,6 +1,9 @@
 datasets/pokemon/*
 results/*
 wandb
+generated_images
+
+models/__pycache__
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

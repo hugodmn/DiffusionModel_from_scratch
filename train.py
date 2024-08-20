@@ -21,7 +21,7 @@ def main(args):
 
     params = load_yaml_into_dotdict(args.params_path)
     # Dataset and DataLoader
-    dataset = PokemonDataset(csv_file='datasets/pokemon/pokemon.csv', img_dir='datasets/pokemon/images')
+    dataset = PokemonDataset(csv_file='datasets/pokesprites/pokemon.csv', img_dir='datasets/pokemon/images')
     
     train_size = int(0.99 * len(dataset))
     val_size = len(dataset) - train_size

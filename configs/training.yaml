@@ -13,5 +13,5 @@ training :
 
 diffusion : 
     timesteps: 1000
-    image_size: 128
+    image_size: 64
   

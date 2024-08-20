@@ -2,7 +2,7 @@ import pytorch_lightning as pl
 from models.TwoResUnet import TwoResUNet
 import torch 
 import torch.nn as nn
-from models.utils import cosine_beta_schedule
+from models.utils import cosine_beta_schedule, linear_beta_schedule
 import torch.nn.functional as F
 from utils import normalize_to_neg_one_to_one, unnormalize_to_zero_to_one, identity, extract
 from tqdm import tqdm 
@@ -26,7 +26,7 @@ class DiffusionModel(nn.Module):
         #ALSO DEAL WITH YAML CONFIGURATION FILES 
         #   
         self.image_size = img_size
-        self.beta_scheduler_fn = cosine_beta_schedule
+        self.beta_scheduler_fn = linear_beta_schedule
         self.diffusion_model = model
 
         betas = self.beta_scheduler_fn(timesteps)
