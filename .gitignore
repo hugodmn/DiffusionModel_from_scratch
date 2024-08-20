@@ -1,4 +1,5 @@
 datasets/pokemon/*
+datasets/pokesprites/*
 results/*
 wandb
 generated_images
