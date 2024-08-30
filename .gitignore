@@ -1,8 +1,10 @@
-datasets/pokemon/*
-datasets/pokesprites/*
-results/*
-wandb
+src/datasets/pokemon/*
+src/datasets/pokesprites/*
+
+src/wandb
 generated_images
+src/results/classic/*
+src/results/onnx/*
 
 models/__pycache__
 # Byte-compiled / optimized / DLL files
