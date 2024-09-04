@@ -38,7 +38,7 @@ To get started with the Pokémon diffusion model, follow these steps:
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/yourusername/your-pokemon-diffusion.git
+    git clone https://github.com/hugodmn/your-pokemon-diffusion.git
     cd your-pokemon-diffusion
     ```
 
