@@ -38,8 +38,8 @@ To get started with the Pokémon diffusion model, follow these steps:
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/hugodmn/your-pokemon-diffusion.git
-    cd your-pokemon-diffusion
+    git clone https://github.com/hugodmn/Pokesprite-Generation.git
+    cd Pokesprite-Generation
     ```
 
 2. **Build the Docker image**:
